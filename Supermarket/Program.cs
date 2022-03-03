@@ -45,10 +45,17 @@ Product product5 = new ComposedProduct()
     Products = new List<Product>() { product1, product2, product3, product4 }
 };
 
- 
 
 Console.WriteLine(product1);
 Console.WriteLine(product2);
 Console.WriteLine(product3);
 Console.WriteLine(product4);
 Console.WriteLine(product5);
+
+Console.WriteLine("RECEIPT");
+Console.WriteLine("-------------------------------------------------");
+Invoice invoice = new Invoice();
+invoice.AddProduct(product1);
+invoice.AddProduct(product3);
+invoice.AddProduct(product5);
+Console.WriteLine(invoice);
